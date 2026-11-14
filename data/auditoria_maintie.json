@@ -1,0 +1,86 @@
+{
+  "fecha_auditoria_utc": "2026-11-13T23:07:40.802332+00:00",
+  "fuente_archivo": "Archivo maintie-main.zip adjuntado por el usuario",
+  "zip_bytes": 1167761,
+  "zip_sha256": "0d472478d680a2c1efc9eafd42edb83174c0844b15bb92635d6ec6db6cac6d34",
+  "zip_integridad_crc": "OK",
+  "origen_repositorio_declarado": "https://github.com/nlp-tlp/maintie",
+  "licencia_archivo": "maintie-main/LICENSE.md; declara MIT pero conserva marcadores [year] [fullname] en copyright",
+  "corpus": {
+    "gold_release.json": {
+      "registros": 1076,
+      "bytes": 817880,
+      "sha256": "ef811cf4ffd0c90e6a13b1369e24e9d1d08f9a294d873ab4fb1a580096d7d6e0",
+      "campos": [
+        "entities",
+        "relations",
+        "text",
+        "tokens"
+      ],
+      "entidades": 3397,
+      "entidades_por_clase_superior": {
+        "PhysicalObject": 1994,
+        "State": 438,
+        "Activity": 784,
+        "Process": 146,
+        "Property": 35
+      },
+      "relaciones": 2341,
+      "relaciones_por_clase": {
+        "hasPart": 533,
+        "hasParticipant/hasPatient": 1206,
+        "isA": 364,
+        "hasParticipant/hasAgent": 166,
+        "contains": 38,
+        "hasProperty": 34
+      },
+      "etiquetas_superiores": 5,
+      "tipos_relacion": 6,
+      "duplicados_texto_extras": 2,
+      "errores_indices_entidades": 0,
+      "errores_indices_relaciones": 0,
+      "textos_unicos": 1074
+    },
+    "silver_release.json": {
+      "registros": 7000,
+      "bytes": 4607249,
+      "sha256": "af8f785e5c03fdaefeb9b94dad7d24cbd030c2fa4b53ee452069d035f4bf4877",
+      "campos": [
+        "entities",
+        "relations",
+        "text",
+        "tokens"
+      ],
+      "entidades": 22122,
+      "entidades_por_clase_superior": {
+        "Activity": 5045,
+        "State": 2747,
+        "PhysicalObject": 13472,
+        "Process": 728,
+        "Property": 130
+      },
+      "relaciones": 15200,
+      "relaciones_por_clase": {
+        "hasPatient": 7761,
+        "hasPart": 3837,
+        "isA": 2512,
+        "hasAgent": 789,
+        "contains": 178,
+        "hasProperty": 123
+      },
+      "etiquetas_superiores": 5,
+      "tipos_relacion": 6,
+      "duplicados_texto_extras": 5,
+      "errores_indices_entidades": 0,
+      "errores_indices_relaciones": 0,
+      "textos_unicos": 6995
+    }
+  },
+  "coincidencias_texto_gold_silver": 7,
+  "anotaciones": [
+    "Las 6 etiquetas en Gold y Silver emplean nomenclatura distinta para las relaciones hasAgent y hasPatient; homologar antes de entrenamiento conjunto",
+    "Los 1.076 registros Gold corresponden al archivo real; README menciona 1.067 doblemente anotados en otra sección",
+    "La posesión del ZIP verifica disponibilidad local, pero no prueba acceso de los docentes al repositorio del proyecto ni permiso de entrega individual.",
+    "Código original models/create_datasets.py define semilla 1337 y partición 80/10/10; antes de aplicar, revisar filtración de duplicados."
+  ]
+}
